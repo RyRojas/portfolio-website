@@ -277,6 +277,10 @@ main {
     margin: .45rem 0;
 }
 
+.profile__description a {
+    margin-right: auto;
+}
+
 /* 2.4 About */
 
 .about-page__description {
@@ -341,6 +345,7 @@ main {
     max-width: 400px;
     padding: 0.75rem;
 }
+
 .portfolio-grid__item h2 {
     margin: .25rem 0;
 }
@@ -436,6 +441,53 @@ main {
 }
 
 @media all and (max-width: 45em) {
+    /*Ideally this will be a hamburger in the future*/
+    .navigation-list {
+        display: -ms-inline-grid;
+        display: inline-grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: end;
+    }
+    .navigation-list > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .navigation-list > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+    .navigation-list > *:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+    .navigation-list > *:nth-child(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+
+    .profile {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .profile__portrait {
+        margin: auto;
+    }
+    
+    .profile__description a {
+        margin: 1rem auto;
+    }
+
     .portfolio-grid {
         margin: 0 2.5%;
         -ms-grid-columns: 1fr;

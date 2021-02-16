@@ -198,6 +198,10 @@ main {
     margin: .45rem 0;
 }
 
+.profile__description a {
+    margin-right: auto;
+}
+
 /* 2.4 About */
 
 .about-page__description {
@@ -315,6 +319,27 @@ main {
 }
 
 @media all and (max-width: 45em) {
+    /*Ideally this will be a hamburger in the future*/
+    .navigation-list {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: end;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile__portrait {
+        margin: auto;
+    }
+    
+    .profile__description a {
+        margin: 1rem auto;
+    }
+
     .portfolio-grid {
         margin: 0 2.5%;
         grid-template-columns: 1fr;
